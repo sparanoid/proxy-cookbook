@@ -28,3 +28,6 @@
 ## Auto start
 	vi /etc/rc.local
 	forever start -a -l /dev/null /usr/bin/ssserver -c ~/.ssconfig.json
+
+## Stop
+	forever stop /usr/bin/ssserver
