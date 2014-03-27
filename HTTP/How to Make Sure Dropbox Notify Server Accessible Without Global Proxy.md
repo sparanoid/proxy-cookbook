@@ -1,3 +1,5 @@
+# How to Make Sure Dropbox Notify Server Accessible Without Global Proxy
+
 ## Edit config
 
 	vi /usr/local/etc/privoxy/config
