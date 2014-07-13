@@ -245,7 +245,7 @@ Change OS X system HTTP proxy to `localhost`, port `8118`
 
 ## Make a .plist to make sure autossh auto run at system startup
 
-	vi ~/Library/LaunchAgents/com.sparanoid. privoxy.plist
+	vi ~/Library/LaunchAgents/com.sparanoid.privoxy.plist
 
 `com.sparanoid.privoxy.plist` can be changed to `com.yourname.identifier.plist`
 
