@@ -2,6 +2,7 @@
 
 Polipo configurations:
 
+```
 # config file for polipo @ ~/.polipo
 
 proxyAddress = "0.0.0.0"
@@ -26,8 +27,7 @@ censorReferer = maybe
 # maxConnectionRequests = 120
 # serverMaxSlots = 8
 # serverSlots = 2
-
-Source: http://bao3.blogspot.jp/2012/01/apn-proxy-apn.html
+```
 
 ## Emtpy Polipo cache via Cron
 
@@ -47,3 +47,9 @@ cache_dir="/usr/local/var/cache/polipo/"
 
 find "$cache_dir" -mtime +14 -exec rm -rf {} \;
 ```
+
+## References
+
+
+- Source: http://bao3.blogspot.jp/2012/01/apn-proxy-apn.html
+
