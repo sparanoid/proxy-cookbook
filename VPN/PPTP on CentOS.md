@@ -5,7 +5,7 @@
 You can find the correct package at this website http://poptop.sourceforge.net/yum/stable/packages/ :
 
 	cd /usr/local/src
-	rpm -Uhv http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.3.4-2.el6.i686.rpm
+	rpm -Uhv http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.4.0-1.el6.i686.rpm
 	yum install pptpd -y
 
 ## Once installed, open /etc/pptpd.conf using text editor and add following line:
