@@ -29,6 +29,13 @@ censorReferer = maybe
 # serverSlots = 2
 ```
 
+## Reload Polipo
+
+```
+launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
+```
+
 ## Emtpy Polipo cache via Cron
 
 ```
