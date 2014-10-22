@@ -50,9 +50,7 @@ In `cleanup-polipo.sh`:
 # 0 5,16 * * * bash ~/Documents/Backups/Scripts/cleanup-polipo.sh
 # 0 5,16 * * * bash ~/Dropbox/Mac/Backups/Scripts/cleanup-polipo.sh
 
-cache_dir="/usr/local/var/cache/polipo/"
-
-find "$cache_dir" -mtime +14 -exec rm -rf {} \;
+polipo -x
 ```
 
 ## References
