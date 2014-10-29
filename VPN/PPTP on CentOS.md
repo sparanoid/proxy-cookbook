@@ -36,7 +36,8 @@ You can find the correct package at this website http://poptop.sourceforge.net/y
 
 ## Allow IP masquerading in IPtables by executing following line:
 	iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-or
+
+## or
 	iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 	
 ## Save Settings and restart
