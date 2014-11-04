@@ -8,6 +8,8 @@ You can find the correct package at this website http://poptop.sourceforge.net/y
 	rpm -Uhv http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.4.0-1.el6.x86_64.rpm
 	yum install pptpd -y
 
+Or use `*.i686.rpm` if you're using 32-bit system.
+
 ## Once installed, open /etc/pptpd.conf using text editor and add following line:
 	vi /etc/pptpd.conf
 	localip 192.168.0.1
@@ -39,7 +41,7 @@ You can find the correct package at this website http://poptop.sourceforge.net/y
 
 ## or
 	iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
-	
+
 ## Save Settings and restart
 	service iptables save
 	service iptables restart
