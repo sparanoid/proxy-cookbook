@@ -5,13 +5,13 @@
 You can find the correct package at this website http://poptop.sourceforge.net/yum/stable/packages/ :
 
 	cd /usr/local/src
-	rpm -Uhv http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.3.4-2.el6.i686.rpm
+	rpm -Uhv http://poptop.sourceforge.net/yum/stable/packages/pptpd-1.4.0-1.el6.x86_64.rpm
 	yum install pptpd -y
 
 ## Once installed, open /etc/pptpd.conf using text editor and add following line:
 	vi /etc/pptpd.conf
 	localip 192.168.0.1
-	remoteip 192.168.0.234-238,192.168.0.245
+	remoteip 192.168.0.231-238,192.168.0.245
 
 ## Open /etc/ppp/options.pptpd and add  authenticate method, encryption and DNS resolver value:
 	vi /etc/ppp/options.pptpd
@@ -31,14 +31,23 @@ You can find the correct package at this website http://poptop.sourceforge.net/y
 ## Run following command to take effect on the changes:
 	sysctl -p
 
+## Check your outer IP access
+	ifconfig
+
 ## Allow IP masquerading in IPtables by executing following line:
 	iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+## or
+	iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+	
+## Save Settings and restart
 	service iptables save
 	service iptables restart
+	service pptpd restart
 
 Update: Once you have done with step 8, check the rules at `/etc/sysconfig/iptables`. Make sure that the POSTROUTING rules is above any REJECT rules.
 
-## Turn on the pptpd service at startup and reboot the server:
+## Turn on the pptpd service at startup and reboot the server ( for the fisrt time ):
 	chkconfig pptpd on
 	init 6
 
