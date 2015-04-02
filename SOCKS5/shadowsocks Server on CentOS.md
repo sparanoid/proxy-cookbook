@@ -7,6 +7,10 @@ Since Shadowsocks Node.js is [deprecated](https://github.com/shadowsocks/shadows
     yum install python-setuptools && easy_install pip
     pip install shadowsocks
 
+## Upgrade
+
+    pip install shadowsocks --upgrade
+
 ## Configurations
     vi ~/.ssconfig.json
 
@@ -29,3 +33,6 @@ Since Shadowsocks Node.js is [deprecated](https://github.com/shadowsocks/shadows
 
 ## Stop
     ssserver -c ~/.ssconfig.json -d stop
+
+## Restart
+    ssserver -c ~/.ssconfig.json -d restart
