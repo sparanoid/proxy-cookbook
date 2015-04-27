@@ -1,4 +1,4 @@
-Since Shadowsocks Node.js is [deprecated](https://github.com/shadowsocks/shadowsocks-nodejs), here's a libev version:
+Since Shadowsocks Node.js is [deprecated](https://github.com/shadowsocks/shadowsocks-nodejs), here's a Python version:
 
 ## Uninstall shadowsocks Node.js version first
     npm uninstall -g shadowsocks
@@ -26,6 +26,16 @@ Since Shadowsocks Node.js is [deprecated](https://github.com/shadowsocks/shadows
     }
 
     ssserver -c ~/.ssconfig.json -d start
+
+## Optimization
+
+https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks
+
+    vi /etc/sysctl.conf
+    sysctl -p /etc/sysctl.conf
+
+## Enhance encryption
+    yum install m2crypto
 
 ## Auto start
     vi /etc/rc.local
