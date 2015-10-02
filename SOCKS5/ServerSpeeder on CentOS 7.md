@@ -23,6 +23,7 @@ maxmode="1"
 /serverspeeder/bin/serverSpeeder.sh stop
 /serverspeeder/bin/serverSpeeder.sh stats
 /serverspeeder/bin/serverSpeeder.sh status
+/serverspeeder/bin/serverSpeeder.sh renewLic
 
 /appex/bin/lotServer.sh start
 /appex/bin/lotServer.sh reload
@@ -30,6 +31,7 @@ maxmode="1"
 /appex/bin/lotServer.sh stop
 /appex/bin/lotServer.sh stats
 /appex/bin/lotServer.sh status
+/appex/bin/lotServer.sh renewLic
 
 https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks
 sysctl -p /etc/sysctl.conf
